@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace Stalkerraria.Content.Armor.Mage
+namespace Stalkerraria.Content.Armor.Melee
 {
     // The AutoloadEquip attribute automatically attaches an equip texture to this item.
     // Providing the EquipType.Body value here will result in TML expecting X_Arms.png, X_Body.png and X_FemaleBody.png sprite-sheet files to be placed next to the item's main texture.
@@ -12,7 +12,7 @@ namespace Stalkerraria.Content.Armor.Mage
     {
         public static float MeleeSpeedBonus = 0.15f;
 
-        public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(MaxManaIncrease);
+        public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(MeleeSpeedBonus);
 
         public override void SetDefaults()
         {
