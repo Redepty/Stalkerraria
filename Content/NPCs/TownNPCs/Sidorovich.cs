@@ -19,6 +19,7 @@ using Stalkerraria.Content.Items.Accessories;
 using Stalkerraria.Content.Armor.Mage;
 using Stalkerraria.Content.Armor.Summoner;
 using Stalkerraria.Content.Items.Weapons;
+using Stalkerraria.Content.Armor.Melee;
 
 namespace Stalkerraria.Content.NPCs.TownNPCs
 {
@@ -130,6 +131,7 @@ namespace Stalkerraria.Content.NPCs.TownNPCs
                 .Add<RaincoatBreastplate>()
                 .Add<HunterHood>()
                 .Add<HunterCloak>()
+                .Add<BodyArmor>()
                 .Add<Bolt>();
     
             npcShop.Register(); // Name of this shop tab

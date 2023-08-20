@@ -12,8 +12,7 @@ namespace Stalkerraria.Content.Armor.Mage
     {
         public static int MaxManaIncrease = 10;
         public static int SetBonusManaIncrease = 20;
-        public static int AddictiveMagicDamageBonus = 20;
-        public static int AddictiveDefenceBonus = 2;
+        public static float MagicDamageBonus = 0.2f;
 
         public static LocalizedText SetBonusText { get; private set; }
 
@@ -52,8 +51,7 @@ namespace Stalkerraria.Content.Armor.Mage
         public override void UpdateArmorSet(Player player)
         {
             player.setBonus = SetBonusText.Value; // This is the setbonus tooltip: "Increases dealt damage by 20%"
-            player.GetDamage(DamageClass.Magic) += AddictiveMagicDamageBonus / 100f; // Increase dealt damage for magic weapon classes by 20%
-            player.statDefense += AddictiveDefenceBonus;
+            player.GetDamage(DamageClass.Magic) += MagicDamageBonus; // Increase dealt damage for magic weapon classes by 20%
             player.statManaMax2 += SetBonusManaIncrease;
         }
     }

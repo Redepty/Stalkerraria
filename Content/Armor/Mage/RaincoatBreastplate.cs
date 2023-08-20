@@ -25,7 +25,7 @@ namespace Stalkerraria.Content.Armor.Mage
             Item.height = 18; // Height of the item
             Item.value = 2000; // How many coins the item is worth
             Item.rare = ItemRarityID.Green; // The rarity of the item
-            Item.defense = 3; // The amount of defense the item will give when equipped
+            Item.defense = 2; // The amount of defense the item will give when equipped
             Item.buyPrice(0,0,30,0);
         }
 

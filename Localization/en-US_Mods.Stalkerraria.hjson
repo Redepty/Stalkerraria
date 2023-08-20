@@ -166,6 +166,22 @@ Items: {
 		DisplayName: Knife
 		Tooltip: ""
 	}
+
+	BodyArmor: {
+		DisplayName: Body Armor
+		Tooltip: ""
+	}
+
+	OzkHelmet: {
+		SetBonus: Mods.Stalkerraria.Items.OzkHelmet.SetBonus
+		DisplayName: Ozk Helmet
+		Tooltip: ""
+	}
+
+	OzkBreastplate: {
+		DisplayName: Ozk Breastplate
+		Tooltip: ""
+	}
 }
 
 NPCs: {
