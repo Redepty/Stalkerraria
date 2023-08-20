@@ -182,6 +182,11 @@ Items: {
 		// DisplayName: Ozk Breastplate
 		// Tooltip: ""
 	}
+
+	RaincoatLeggings: {
+		// DisplayName: Raincoat Leggings
+		// Tooltip: ""
+	}
 }
 
 NPCs: {
