@@ -129,12 +129,13 @@ namespace Stalkerraria.Content.NPCs.TownNPCs
             var npcShop = new NPCShop(Type, ShopName)
                 .Add<RaincoatHelmet>()
                 .Add<RaincoatBreastplate>()
+                .Add<RaincoatLeggings>()
                 .Add<HunterHood>()
                 .Add<HunterCloak>()
-                .Add<BodyArmor>()
+                .Add<HunterLeggings>()
                 .Add<Helmet>()
-                .Add<Jeans>()
                 .Add<BodyArmor>()
+                .Add<Jeans>()
                 .Add<Bolt>();
     
             npcShop.Register(); // Name of this shop tab

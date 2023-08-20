@@ -192,6 +192,22 @@ Items: {
 		DisplayName: Hunter Leggings
 		Tooltip: ""
 	}
+
+	Helmet: {
+		SetBonus: Mods.Stalkerraria.Items.Helmet.SetBonus
+		DisplayName: Helmet
+		Tooltip: ""
+	}
+
+	OzkLeggings: {
+		DisplayName: Ozk Leggings
+		Tooltip: ""
+	}
+
+	Jeans: {
+		DisplayName: Jeans
+		Tooltip: ""
+	}
 }
 
 NPCs: {
