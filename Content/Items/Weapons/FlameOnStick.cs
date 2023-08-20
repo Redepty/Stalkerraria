@@ -10,6 +10,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Stalkerraria.Content.Projectiles;
+using Stalkerraria.Content.Items.Accessories;
 
 namespace Stalkerraria.Content.Items.Weapons
 {
@@ -40,6 +41,15 @@ namespace Stalkerraria.Content.Items.Weapons
             Item.shootSpeed = 10; // How fast the item shoots the projectile.
             Item.crit = 4; // The percent chance at hitting an enemy with a crit, plus the default amount of 4.
             Item.mana = 15; // This is how much mana the item uses.
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<FlameArt>())
+                .AddIngredient(ItemID.Wood)
+                .AddTile(TileID.WorkBenches)
+                .Register();
         }
     }
 }
