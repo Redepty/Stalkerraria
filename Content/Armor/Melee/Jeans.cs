@@ -12,7 +12,7 @@ namespace Stalkerraria.Content.Armor.Mage
     {
         public static float MeleeSpeedBonus = 0.15f;
 
-        public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(MaxManaIncrease);
+        public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(MeleeSpeedBonus);
 
         public override void SetDefaults()
         {
