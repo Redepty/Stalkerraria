@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using Stalkerraria.Content.Items;
+using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -33,6 +34,16 @@ namespace Stalkerraria.Content.Armor.Mage
         {
             player.statManaMax2 += MaxManaIncrease; // Increase how many mana points the player can have by 40
             player.GetDamage(DamageClass.Magic) += MagicDamageBonus;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<RaincoatBreastplate>())
+                .AddIngredient(ModContent.ItemType<SwampStone>(), 6)
+                .AddIngredient(ModContent.ItemType<Mildew>(), 8)
+                .AddTile(TileID.Anvils)
+                .Register();
         }
     }
 }

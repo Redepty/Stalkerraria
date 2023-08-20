@@ -132,6 +132,9 @@ namespace Stalkerraria.Content.NPCs.TownNPCs
                 .Add<HunterHood>()
                 .Add<HunterCloak>()
                 .Add<BodyArmor>()
+                .Add<Helmet>()
+                .Add<Jeans>()
+                .Add<BodyArmor>()
                 .Add<Bolt>();
     
             npcShop.Register(); // Name of this shop tab

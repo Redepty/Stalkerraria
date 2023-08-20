@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using Stalkerraria.Content.Items;
+using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -8,12 +9,11 @@ namespace Stalkerraria.Content.Armor.Mage
     // The AutoloadEquip attribute automatically attaches an equip texture to this item.
     // Providing the EquipType.Body value here will result in TML expecting X_Arms.png, X_Body.png and X_FemaleBody.png sprite-sheet files to be placed next to the item's main texture.
     [AutoloadEquip(EquipType.Legs)]
-    public class RaincoatLeggings : ModItem
+    public class OzkLeggings : ModItem
     {
-        public static float ManaCostDecrease = 0.15f;
-        public static int MaxManaIncrease = 10;
+        public static int MeleeKnockbackBonus = 2;
 
-        public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(MaxManaIncrease);
+        public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(MeleeKnockbackBonus);
 
         public override void SetDefaults()
         {
@@ -27,8 +27,17 @@ namespace Stalkerraria.Content.Armor.Mage
 
         public override void UpdateEquip(Player player)
         {
-            player.statManaMax2 += MaxManaIncrease; // Increase how many mana points the player can have by 20
-            player.manaCost -= ManaCostDecrease; // Increase how many mana points the player can have by 20
+            player.GetKnockback(DamageClass.Melee) += MeleeKnockbackBonus;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<RaincoatBreastplate>())
+                .AddIngredient(ModContent.ItemType<SwampStone>(), 6)
+                .AddIngredient(ModContent.ItemType<Mildew>(), 6)
+                .AddTile(TileID.Anvils)
+                .Register();
         }
     }
 }
