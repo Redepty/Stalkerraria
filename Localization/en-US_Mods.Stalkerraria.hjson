@@ -1,0 +1,246 @@
+Biomes: {
+	Wasteland: {
+		TownNPCDialogueName: the Wasteland
+		DisplayName: Wasteland
+	}
+}
+
+Items: {
+	BatteryArt: {
+		DisplayName: Battery
+		Tooltip: ""
+	}
+
+	EyeArt: {
+		DisplayName: Eye
+		Tooltip: ""
+	}
+
+	FlameArt: {
+		DisplayName: Flame
+		Tooltip: ""
+	}
+
+	FrequencyCrystalArt: {
+		DisplayName: Frequency crystal
+		Tooltip: ""
+	}
+
+	HeliumArt: {
+		DisplayName: Helium
+		Tooltip: ""
+	}
+
+	MomsBeadsArt: {
+		DisplayName: Mom's Beads
+		Tooltip: ""
+	}
+
+	BileStoneArt: {
+		DisplayName: Bile stone
+		Tooltip: ""
+	}
+
+	BloodStoneArt: {
+		DisplayName: Blood stone
+		Tooltip: ""
+	}
+
+	PacifierArt: {
+		DisplayName: Pacifier
+		Tooltip: ""
+	}
+
+	BubbleArt: {
+		DisplayName: Bubble
+		Tooltip: ""
+	}
+
+	KisselArt: {
+		DisplayName: Kissel
+		Tooltip: ""
+	}
+
+	PellicleArt: {
+		DisplayName: Pellicle
+		Tooltip: ""
+	}
+
+	Mildew: {
+		DisplayName: Mildew
+		Tooltip: ""
+	}
+
+	SwampStone: {
+		DisplayName: Swamp Stone
+		Tooltip: ""
+	}
+
+	AKS47Y: {
+		DisplayName: AKS 47Y
+		Tooltip: ""
+	}
+
+	GaussGun: {
+		DisplayName: Gauss Gun
+		Tooltip: ""
+	}
+
+	RaincoatBreastplate: {
+		DisplayName: Raincoat breastplate
+		Tooltip: ""
+	}
+
+	RaincoatHelmet: {
+		SetBonus:
+			'''
+			Increases max mana per 20 
+			Increases defence per 2 
+			Increases magic damage per 20%
+			'''
+		DisplayName: Raincoat helmet
+		Tooltip: Increases max mana per 10
+	}
+
+	Bolt: {
+		DisplayName: Bolt
+		Tooltip: ""
+	}
+
+	HunterHood: {
+		Tooltip: ""
+		DisplayName: Hunter Hood
+	}
+
+	HunterCloak: {
+		Tooltip: ""
+		DisplayName: Hunter Cloak
+	}
+
+	JorboaMinionItem: {
+		DisplayName: Jorboa Minion Item
+		Tooltip: ""
+	}
+
+	CrystalOnStick: {
+		DisplayName: Crystal On Stick
+		Tooltip: ""
+	}
+
+	FlameOnStick: {
+		DisplayName: Flame On Stick
+		Tooltip: ""
+	}
+
+	KisselOnStick: {
+		DisplayName: Kissel On Stick
+		Tooltip: ""
+	}
+
+	RustyChain: {
+		DisplayName: Rusty Chain
+		Tooltip: ""
+	}
+
+	RustyTube: {
+		DisplayName: Rusty Tube
+		Tooltip: ""
+	}
+
+	BigScrapMetal: {
+		DisplayName: Big Scrap Metal
+		Tooltip: ""
+	}
+
+	ScrapIngot: {
+		DisplayName: Scrap Ingot
+		Tooltip: ""
+	}
+
+	ScrapMetal: {
+		DisplayName: Scrap Metal
+		Tooltip: ""
+	}
+
+	Knife: {
+		DisplayName: Knife
+		Tooltip: ""
+	}
+}
+
+NPCs: {
+	ElectricAnomaly.DisplayName: Electric Anomaly
+	TermicAnomaly.DisplayName: Termic Anomaly
+	FunnelAnomaly.DisplayName: Funnel Anomaly
+	KisselAnomaly.DisplayName: Kissel Anomaly
+	BlindDog.DisplayName: Blind Dog
+	BloodSucker.DisplayName: Blood Sucker
+	Jerboas.DisplayName: Jerboas
+
+	Sidirovich: {
+		DisplayName: Sidirovich
+
+		TownNPCMood: {
+			Content: Я довольный.
+			NoHome: Терпеть не могу, когда у меня нет дома.
+			FarFromHome: Я слишком далеко от дома.
+			LoveSpace: Я люблю, когда так много пространства.
+			DislikeCrowded: Мне не нравится то, как здесь людно.
+			HateCrowded: Я ненавижу то, как здесь людно.
+			LoveBiome: Я люблю {BiomeName}.
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I like {NPCName}.
+		}
+	}
+
+	Sidorovich: {
+		DisplayName: Sidorovich
+
+		TownNPCMood: {
+			Content: Я довольный.
+			NoHome: Терпеть не могу, когда у меня нет дома.
+			FarFromHome: Я слишком далеко от дома.
+			LoveSpace: Я люблю, когда так много пространства.
+			DislikeCrowded: Мне не нравится то, как здесь людно.
+			HateCrowded: Я ненавижу то, как здесь людно.
+			LoveBiome: Я люблю {BiomeName}.
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I like {NPCName}.
+		}
+	}
+
+	AlbinoBloodSucker.DisplayName: Albino Blood Sucker
+}
+
+Buffs: {
+	RadiationDebuff1: {
+		DisplayName: Radiation level 1
+		Description: ""
+	}
+
+	RadiationDebuff2: {
+		DisplayName: Radiation level 2
+		Description: ""
+	}
+
+	RadiationDebuff3: {
+		DisplayName: Radiation level 3
+		Description: ""
+	}
+
+	JorboaMinionBuff: {
+		DisplayName: Jorboa Minion Buff
+		Description: Mods.Stalkerraria.Buffs.JorboaMinionBuff.Description
+	}
+}
+
+Projectiles: {
+	GaussGunLaser.DisplayName: Gauss Gun Laser
+	BoltProjectile.DisplayName: Bolt
+	JorboaMinion.DisplayName: Jorboa Minion
+	CrystalProjectile.DisplayName: Crystal Projectile
+	FlameProjectile.DisplayName: Flame Projectile
+	KisselProjectile.DisplayName: Kissel Projectile
+	RustyChainProjectile.DisplayName: Rusty Chain Projectile
+	KnifeProjectile.DisplayName: Knife Projectile
+}
