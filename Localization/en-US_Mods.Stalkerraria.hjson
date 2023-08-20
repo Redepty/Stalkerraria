@@ -187,6 +187,11 @@ Items: {
 		DisplayName: Raincoat Leggings
 		Tooltip: ""
 	}
+
+	HunterLeggings: {
+		DisplayName: Hunter Leggings
+		Tooltip: ""
+	}
 }
 
 NPCs: {
