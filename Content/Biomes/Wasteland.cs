@@ -6,6 +6,7 @@ using Terraria.Graphics.Capture;
 using Terraria.ModLoader;
 using Stalkerraria.Backgrounds;
 using Stalkerraria.Content.Biomes;
+using Stalkerraria.Common.Systems;
 
 namespace Stalkerraria.Content.Biomes
 {
@@ -33,7 +34,7 @@ namespace Stalkerraria.Content.Biomes
         public override bool IsBiomeActive(Player player)
         {
             // First, we will use the exampleBlockCount from our added ModSystem for our first custom condition
-            bool b1 = true;
+            bool b1 = ModContent.GetInstance<WastelandTileCount>().exampleBlockCount >= 40;
 
             // Second, we will limit this biome to the inner horizontal third of the map as our second custom condition
             bool b2 = Math.Abs(player.position.ToTileCoordinates().X - Main.maxTilesX / 2) < Main.maxTilesX / 6;

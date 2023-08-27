@@ -14,6 +14,7 @@ using Terraria.ModLoader.IO;
 using Stalkerraria.Content.Buffs;
 using Stalkerraria.Content.Items.Accessories;
 using Stalkerraria.Common.ItemDropRules.DropConditions;
+using Stalkerraria.Content.Biomes;
 
 namespace Stalkerraria.Content.NPCs.Anomalies
 {
@@ -49,7 +50,7 @@ namespace Stalkerraria.Content.NPCs.Anomalies
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return 0.5f;//spawnInfo.Player.InModBiome<Wasteland>() ? 0.4f : 0 ;
+            return spawnInfo.Player.InModBiome<Wasteland>() ? 0.4f : 0 ;
         }
 
         // public override float SpawnChance(NPCSpawnInfo spawnInfo) => NPC.downedMechBossAny && Main.eclipse && spawnInfo.Player.ZoneOverworldHeight ? 0.07f : 0;

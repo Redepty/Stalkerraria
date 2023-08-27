@@ -14,6 +14,7 @@ using Terraria.ModLoader.IO;
 using Stalkerraria.Content.Buffs;
 using Stalkerraria.Content.Items.Accessories;
 using Stalkerraria.Common.ItemDropRules.DropConditions;
+using Stalkerraria.Content.Biomes;
 
 
 namespace Stalkerraria.Content.NPCs.Anomalies
