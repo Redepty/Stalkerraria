@@ -32,7 +32,7 @@ namespace Stalkerraria.Content.Armor.Summoner
         // IsArmorSet determines what armor pieces are needed for the setbonus to take effect
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            return body.type == ModContent.ItemType<HunterCloak>();
+            return body.type == ModContent.ItemType<HunterCloak>() && legs.type == ModContent.ItemType<HunterLeggings>();
         }
 
         // UpdateArmorSet allows you to give set bonuses to the armor.

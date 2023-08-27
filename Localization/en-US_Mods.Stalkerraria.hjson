@@ -1,6 +1,6 @@
 Biomes: {
 	Wasteland: {
-		TownNPCDialogueName: the Wasteland
+		TownNPCDialogueName: Wasteland
 		DisplayName: Wasteland
 	}
 }

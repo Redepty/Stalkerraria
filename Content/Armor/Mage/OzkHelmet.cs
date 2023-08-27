@@ -39,7 +39,7 @@ namespace Stalkerraria.Content.Armor.Mage
         // IsArmorSet determines what armor pieces are needed for the setbonus to take effect
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            return body.type == ModContent.ItemType<OzkBreastplate>();
+            return body.type == ModContent.ItemType<OzkBreastplate>() && legs.type == ModContent.ItemType<OzkLeggings>();
         }
 
         // UpdateArmorSet allows you to give set bonuses to the armor.
