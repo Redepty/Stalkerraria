@@ -20,11 +20,54 @@ namespace Stalkerraria
     {
         public override void ModifyWorldGenTasks(List<GenPass> tasks, ref double totalWeight)
         {
-            int genIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Micro Biomes"));
-            tasks.Insert(genIndex + 1, new PassLegacy("Adding zone", delegate
+            int genIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Living Trees"));
+            tasks.Insert(genIndex - 1, new PassLegacy("Adding zone", delegate
             {
-                WorldGen.TileRunner(Main.spawnTileX, Main.spawnTileY, 42, 30, ModContent.TileType<WastelandGrass>(), true, 15, 0, true, true);
+                int startX = (Main.maxTilesX / 2) + WorldGen.genRand.Next(150, 250);
+                int endX = startX + WorldGen.genRand.Next(200, 250) + Main.maxTilesY / 200;
+                int attempts = 0;
+                bool validLocation = false;
+                for (int i = startX; i < endX; i++)
+                {
+                    int y = (int)(Main.worldSurface * 0.5f);
+                    while (y < Main.worldSurface)
+                    {
+                        if (WorldGen.SolidTile(i, y))
+                        {
+                            if (i == startX)
+                            {
+                                Dictionary<ushort, int> dictionary = new Dictionary<ushort, int>();
+                                WorldUtils.Gen(new Point(startX, y + 15), new Shapes.Rectangle(endX - startX, 30), new Actions.TileScanner(TileID.Dirt, TileID.Cloud).Output(dictionary));
+                                int dirtCount = dictionary[TileID.Dirt];
+                                int cloudCount = dictionary[TileID.Cloud];
+                                if (dirtCount > endX * 30 / 3 && cloudCount == 0)
+                                {
+                                    validLocation = true;
+                                }
+                                else if (cloudCount != 0)
+                                {
+                                    y++;
+                                }
+                            }
+                            if (validLocation || attempts >= 40)
+                            {
+                                WorldGen.EmptyLiquid(i, y);
+                                WorldGen.TileRunner(i, y, WorldGen.genRand.Next(35, 45), WorldGen.genRand.Next(10, 15), ModContent.TileType<WastelandGrass>());
+                            }
+                            else
+                            {
+                                attempts++;
+                                endX--;
+                                startX--;
+                                i = startX;
+                            }
+                            break;
+                        }
+                        y++;
+                    }
+                }
             }));
+
         }
     }
 }
