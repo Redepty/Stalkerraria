@@ -14,6 +14,7 @@ namespace Stalkerraria.Content.Items.Accessories
             Item.width = 42;
             Item.height = 42;
             Item.rare = ItemRarityID.LightRed;
+            Item.value = 50000;
             Item.accessory = true;
         }
 

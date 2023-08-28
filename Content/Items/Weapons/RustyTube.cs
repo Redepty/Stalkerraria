@@ -21,7 +21,7 @@ namespace Stalkerraria.Content.Items.Weapons
             Item.useAnimation = 15;
             Item.autoReuse = true;
 
-            Item.damage = 25;
+            Item.damage = 15;
             Item.DamageType = DamageClass.Melee;
             Item.knockBack = 6;
             Item.crit = 4;

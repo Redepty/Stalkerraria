@@ -223,6 +223,26 @@ Items: {
 		// DisplayName: Jeans
 		// Tooltip: ""
 	}
+
+	ElectricShard: {
+		// DisplayName: Electric Shard
+		// Tooltip: ""
+	}
+
+	FunnelShard: {
+		// DisplayName: Funnel Shard
+		// Tooltip: ""
+	}
+
+	KisselShard: {
+		// DisplayName: Kissel Shard
+		// Tooltip: ""
+	}
+
+	TermicShard: {
+		// DisplayName: Termic Shard
+		// Tooltip: ""
+	}
 }
 
 NPCs: {
