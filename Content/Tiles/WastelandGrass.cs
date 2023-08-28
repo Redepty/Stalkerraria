@@ -71,17 +71,6 @@ namespace Stalkerraria.Content.Tiles
                             NetMessage.SendTileSquare(-1, p.X, p.Y, 1, TileChangeType.None);
                     }
                 }
-                List<Point> adjacents2 = OpenAdjacents(i, j, TileID.Grass);
-                if (adjacents2.Count > 0)
-                {
-                    Point p = adjacents2[Main.rand.Next(adjacents.Count)];
-                    if (HasOpening(p.X, p.Y))
-                    {
-                        Framing.GetTileSafely(p.X, p.Y).TileType = (ushort)ModContent.TileType<WastelandGrass>();
-                        if (Main.netMode == NetmodeID.Server)
-                            NetMessage.SendTileSquare(-1, p.X, p.Y, 1, TileChangeType.None);
-                    }
-                }
             }
         }
 

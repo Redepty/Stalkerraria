@@ -14,7 +14,7 @@ using Stalkerraria.Content.Biomes;
 using static Terraria.Main.CurrentFrameFlags;
 using static tModPorter.ProgressUpdate;
 
-namespace Stalkerraria
+namespace Stalkerraria.Content
 {
     public class WastelandGen : ModSystem
     {
@@ -37,9 +37,9 @@ namespace Stalkerraria
                             if (i == startX)
                             {
                                 Dictionary<ushort, int> dictionary = new Dictionary<ushort, int>();
-                                WorldUtils.Gen(new Point(startX, y + 15), new Shapes.Rectangle(endX - startX, 30), new Actions.TileScanner(TileID.Dirt, TileID.Cloud).Output(dictionary));
+                                WorldUtils.Gen(new Point(startX, y + 15), new Shapes.Rectangle(endX - startX, 30), new Actions.TileScanner(TileID.Dirt, TileID.Cloud, TileID.LivingWood).Output(dictionary));
                                 int dirtCount = dictionary[TileID.Dirt];
-                                int cloudCount = dictionary[TileID.Cloud];
+                                int cloudCount = dictionary[TileID.Cloud] + dictionary[TileID.LivingWood];
                                 if (dirtCount > endX * 30 / 3 && cloudCount == 0)
                                 {
                                     validLocation = true;

@@ -1,6 +1,6 @@
 Biomes: {
 	Wasteland: {
-		// TownNPCDialogueName: the Wasteland
+		// TownNPCDialogueName: Wasteland
 		// DisplayName: Wasteland
 	}
 }
@@ -8,17 +8,32 @@ Biomes: {
 Items: {
 	BatteryArt: {
 		// DisplayName: Battery
-		// Tooltip: ""
+		/* Tooltip:
+			'''
+			Increases move speed by 25%
+			Increases run acceleration by 50%
+			Enables autojump
+			Increases jump height by 25%
+			Increases atack speed by 10%
+			''' */
 	}
 
 	EyeArt: {
 		// DisplayName: Eye
-		// Tooltip: ""
+		/* Tooltip:
+			'''
+			Increases max hp by 20
+			Gives night vision potion effect
+			''' */
 	}
 
 	FlameArt: {
 		// DisplayName: Flame
-		// Tooltip: ""
+		/* Tooltip:
+			'''
+			Increases hp regen by 1 per second
+			Reduces aggro
+			''' */
 	}
 
 	FrequencyCrystalArt: {
@@ -94,12 +109,12 @@ Items: {
 	RaincoatHelmet: {
 		/* SetBonus:
 			'''
-			Increases max mana per 20 
-			Increases defence per 2 
-			Increases magic damage per 20%
+			Increases max mana by 20 
+			Increases defence by 2 
+			Increases magic damage by 20%
 			''' */
 		// DisplayName: Raincoat helmet
-		// Tooltip: Increases max mana per 10
+		// Tooltip: Increases max mana by 10
 	}
 
 	Bolt: {
@@ -218,22 +233,6 @@ NPCs: {
 	// BlindDog.DisplayName: Blind Dog
 	// BloodSucker.DisplayName: Blood Sucker
 	// Jerboas.DisplayName: Jerboas
-
-	Sidirovich: {
-		// DisplayName: Sidirovich
-
-		TownNPCMood: {
-			// Content: Я довольный.
-			// NoHome: Терпеть не могу, когда у меня нет дома.
-			// FarFromHome: Я слишком далеко от дома.
-			// LoveSpace: Я люблю, когда так много пространства.
-			// DislikeCrowded: Мне не нравится то, как здесь людно.
-			// HateCrowded: Я ненавижу то, как здесь людно.
-			// LoveBiome: Я люблю {BiomeName}.
-			// LikeNPC_Princess: I like {NPCName}.
-			// Princess_LovesNPC: I like {NPCName}.
-		}
-	}
 
 	Sidorovich: {
 		// DisplayName: Sidorovich
