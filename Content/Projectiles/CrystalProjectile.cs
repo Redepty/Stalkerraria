@@ -29,14 +29,6 @@ namespace Stalkerraria.Content.Projectiles
             SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
         }
 
-        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
-        {
-            if (Main.rand.NextBool(2))
-            {
-                target.AddBuff(BuffID.Slow, 3);
-            }
-        }
-
         public override bool PreDraw(ref Color lightColor)
         {
             Main.instance.LoadProjectile(Projectile.type);

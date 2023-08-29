@@ -37,7 +37,7 @@ Items: {
 	}
 
 	FrequencyCrystalArt: {
-		DisplayName: Frequency crystal
+		DisplayName: Frequency Crystal
 		Tooltip: ""
 	}
 
@@ -52,12 +52,12 @@ Items: {
 	}
 
 	BileStoneArt: {
-		DisplayName: Bile stone
+		DisplayName: Bile Stone
 		Tooltip: ""
 	}
 
 	BloodStoneArt: {
-		DisplayName: Blood stone
+		DisplayName: Blood Stone
 		Tooltip: ""
 	}
 
@@ -241,6 +241,11 @@ Items: {
 
 	TermicShard: {
 		DisplayName: Termic Shard
+		Tooltip: ""
+	}
+
+	ToxicSword: {
+		DisplayName: Toxic Sword
 		Tooltip: ""
 	}
 }

@@ -51,21 +51,5 @@ namespace Stalkerraria.Content.Buffs
                 Player.lifeRegen -= 4;
             }
         }
-
-        public class Radiation1DebuffNPC : GlobalNPC
-        {
-            public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref NPC.HitModifiers modifiers)
-            {
-                // Only player attacks should benefit from this buff, hence the NPC and trap checks.
-                if (projectile.npcProj || projectile.trap || !projectile.IsMinionOrSentryRelated)
-                    return;
-
-                if (npc.HasBuff<RadiationDebuff1>())
-                {
-                    // Apply a flat bonus to every hit
-                    npc.lifeRegen -= 4;
-                }
-            }
-        }
     }
 }

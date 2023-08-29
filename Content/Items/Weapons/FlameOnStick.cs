@@ -43,6 +43,14 @@ namespace Stalkerraria.Content.Items.Weapons
             Item.mana = 15; // This is how much mana the item uses.
         }
 
+        public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            if (Main.rand.NextBool(2))
+            {
+                target.AddBuff(BuffID.OnFire, 3*60);
+            }
+        }
+
         public override void AddRecipes()
         {
             CreateRecipe()

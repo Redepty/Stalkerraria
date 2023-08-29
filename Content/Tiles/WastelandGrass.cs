@@ -32,7 +32,7 @@ namespace Stalkerraria.Content.Tiles
             {
                 if (!tile.BottomSlope)
                 {
-                    tileBelow.TileType = TileID.Vines;//(ushort)ModContent.TileType<BriarVines>();
+                    tileBelow.TileType = (ushort)ModContent.TileType<WastelandVines>();
                     tileBelow.HasTile = true;
                     WorldGen.SquareTileFrame(i, j + 1, true);
                     if (Main.netMode == NetmodeID.Server)
@@ -43,11 +43,11 @@ namespace Stalkerraria.Content.Tiles
             }
 
             //try place foliage
-            if (WorldGen.genRand.NextBool(25) && !tileAbove.HasTile && !(tileBelow.LiquidType == LiquidID.Lava))
+            if (WorldGen.genRand.NextBool(50) && !tileAbove.HasTile && !(tileBelow.LiquidType == LiquidID.Lava))
             {
                 if (!tile.BottomSlope && !tile.TopSlope && !tile.IsHalfBlock && !tile.TopSlope)
                 {
-                    tileAbove.TileType = TileID.Mythril;//(ushort)ModContent.TileType<>();
+                    tileAbove.TileType = (ushort)ModContent.TileType<WastelandFoliage0>();
                     tileAbove.HasTile = true;
                     tileAbove.TileFrameY = 0;
                     tileAbove.TileFrameX = (short)(WorldGen.genRand.Next(8) * 18);
@@ -57,10 +57,41 @@ namespace Stalkerraria.Content.Tiles
                 }
             }
 
-            //Try spread grass
+            // try place another foliage
+            if (WorldGen.genRand.NextBool(50) && !tileAbove.HasTile && !(tileBelow.LiquidType == LiquidID.Lava))
+            {
+                if (!tile.BottomSlope && !tile.TopSlope && !tile.IsHalfBlock && !tile.TopSlope)
+                {
+                    tileAbove.TileType = (ushort)ModContent.TileType<WastelandFoliage1>();
+                    tileAbove.HasTile = true;
+                    tileAbove.TileFrameY = 0;
+                    tileAbove.TileFrameX = (short)(WorldGen.genRand.Next(8) * 18);
+                    WorldGen.SquareTileFrame(i, j + 1, true);
+                    if (Main.netMode == NetmodeID.Server)
+                        NetMessage.SendTileSquare(-1, i, j - 1, 3, TileChangeType.None);
+                }
+            }
+
+            //Try spread dirt
             if (Main.rand.NextBool(Main.dayTime && j < Main.worldSurface ? 5 : 8))
             {
                 List<Point> adjacents = OpenAdjacents(i, j, TileID.Dirt);
+                if (adjacents.Count > 0)
+                {
+                    Point p = adjacents[Main.rand.Next(adjacents.Count)];
+                    if (HasOpening(p.X, p.Y))
+                    {
+                        Framing.GetTileSafely(p.X, p.Y).TileType = (ushort)ModContent.TileType<WastelandGrass>();
+                        if (Main.netMode == NetmodeID.Server)
+                            NetMessage.SendTileSquare(-1, p.X, p.Y, 1, TileChangeType.None);
+                    }
+                }
+            }
+
+            //Try spread grass
+            if (Main.rand.NextBool(Main.dayTime && j < Main.worldSurface ? 5 : 8))
+            {
+                List<Point> adjacents = OpenAdjacents(i, j, TileID.Grass);
                 if (adjacents.Count > 0)
                 {
                     Point p = adjacents[Main.rand.Next(adjacents.Count)];

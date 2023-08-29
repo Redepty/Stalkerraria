@@ -24,7 +24,7 @@ namespace Stalkerraria.Content.Items.Weapons
 
         public override void SetDefaults()
         {
-            Item.damage = 10;
+            Item.damage = 13;
             Item.DamageType = DamageClass.Magic; // Makes the damage register as magic. If your item does not have any damage type, it becomes true damage (which means that damage scalars will not affect it). Be sure to have a damage type.
             Item.width = 42; // Hitbox width of the item
             Item.height = 42; // Hitbox height of the item
