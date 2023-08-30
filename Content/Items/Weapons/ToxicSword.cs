@@ -27,7 +27,7 @@ namespace Stalkerraria.Content.Items.Weapons
 
             Item.damage = 20;
             Item.DamageType = DamageClass.Melee;
-            Item.knockBack = 6;
+            Item.knockBack = 4;
             Item.crit = 4;
 
 
@@ -37,6 +37,15 @@ namespace Stalkerraria.Content.Items.Weapons
 
             Item.shoot = ModContent.ProjectileType<KisselProjectile>();
             Item.shootSpeed = 8f; // Speed of the projectiles the sword will shoot
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<RustySword>())
+                .AddIngredient(ModContent.ItemType<KisselShard>(), 3)
+                .AddTile(TileID.Anvils)
+                .Register();
         }
     }
 }

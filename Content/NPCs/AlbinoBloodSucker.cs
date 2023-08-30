@@ -36,7 +36,7 @@ namespace Stalkerraria.Content.NPCs
             NPC.lifeMax = 400;
             NPC.HitSound = SoundID.NPCHit6;
             NPC.DeathSound = SoundID.NPCDeath8;
-            NPC.value = 2000;
+            NPC.value = 500;
             NPC.knockBackResist = 0.25f;
             NPC.aiStyle = 3;
             AIType = NPCID.Mummy;

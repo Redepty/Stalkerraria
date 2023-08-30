@@ -16,7 +16,7 @@ namespace Stalkerraria.Content.Items.Weapons
         {
             Item.CloneDefaults(ItemID.CopperShortsword);
             Item.useStyle = ItemUseStyleID.Rapier;
-            Item.damage = 20;
+            Item.damage = 10;
             Item.width = 42;
             Item.height = 42;
             Item.UseSound = SoundID.Item1;

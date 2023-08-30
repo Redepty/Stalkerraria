@@ -248,6 +248,26 @@ Items: {
 		// DisplayName: Toxic Sword
 		// Tooltip: ""
 	}
+
+	RustySword: {
+		// DisplayName: Rusty Sword
+		// Tooltip: ""
+	}
+
+	LockpickBreastplate: {
+		// DisplayName: Lockpick Breastplate
+		// Tooltip: ""
+	}
+
+	LockpickHood: {
+		// DisplayName: Lockpick Hood
+		// Tooltip: ""
+	}
+
+	LockpickLeggings: {
+		// DisplayName: Lockpick Leggings
+		// Tooltip: ""
+	}
 }
 
 NPCs: {
