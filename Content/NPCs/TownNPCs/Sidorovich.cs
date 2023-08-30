@@ -20,6 +20,7 @@ using Stalkerraria.Content.Armor.Mage;
 using Stalkerraria.Content.Armor.Summoner;
 using Stalkerraria.Content.Items.Weapons;
 using Stalkerraria.Content.Armor.Melee;
+using Stalkerraria.Content.Armor.Ranger;
 
 namespace Stalkerraria.Content.NPCs.TownNPCs
 {
@@ -138,6 +139,9 @@ namespace Stalkerraria.Content.NPCs.TownNPCs
                 .Add<Helmet>()
                 .Add<BodyArmor>()
                 .Add<Jeans>()
+                .Add<LockpickHood>()
+                .Add<LockpickBreastplate>()
+                .Add<LockpickLeggings>()
                 .Add<Bolt>();
     
             npcShop.Register(); // Name of this shop tab

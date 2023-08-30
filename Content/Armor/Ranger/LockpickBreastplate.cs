@@ -10,7 +10,7 @@ namespace Stalkerraria.Content.Armor.Ranger
     public class LockpickBreastplate : ModItem
     {
 
-        public static int RangerCritBonus = 8;
+        public static int CritBonus = 8;
 
         public override void SetStaticDefaults()
         {
@@ -28,7 +28,7 @@ namespace Stalkerraria.Content.Armor.Ranger
 
         public override void UpdateEquip(Player player)
         {
-            player.GetCritChance(DamageClass.Ranged) += RangerCritBonus / 100f;
+            player.GetCritChance(DamageClass.Generic) += CritBonus / 100f;
         }
     }
 }

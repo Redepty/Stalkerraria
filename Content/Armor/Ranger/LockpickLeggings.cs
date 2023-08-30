@@ -25,7 +25,7 @@ namespace Stalkerraria.Content.Armor.Ranger
 
         public override void UpdateEquip(Player player)
         {
-            player.GetDamage(DamageClass.Ranged) += RangerDamageBonus;
+            player.GetDamage(DamageClass.Ranged) += RangerDamageBonus / 100f;
         }
     }
 }
