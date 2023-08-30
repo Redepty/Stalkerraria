@@ -89,6 +89,10 @@ namespace Stalkerraria.Content.NPCs
         public override void AI()
         {
             NPC.spriteDirection = NPC.direction;
+            if (NPC.life <= NPC.lifeMax * 0.25f)
+            {
+                NPC.hide = true;
+            }
         }
 
         public override void ModifyNPCLoot(NPCLoot npcLoot)
