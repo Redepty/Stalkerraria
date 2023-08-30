@@ -28,7 +28,7 @@ namespace Stalkerraria.Content.Armor.Ranger
 
         public override void UpdateEquip(Player player)
         {
-            player.GetCritChance(DamageClass.Generic) += CritBonus / 100f;
+            player.GetCritChance(DamageClass.Ranged) += CritBonus;
         }
     }
 }

@@ -1,4 +1,4 @@
-using Terraria;
+﻿using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.Localization;
@@ -20,7 +20,7 @@ using Stalkerraria.Content.Items.Weapons;
 
 namespace Stalkerraria.Content.NPCs
 {
-    public class BloodSucker : ModNPC
+    public class BloodSucker1 : ModNPC
     {
 
         public int VersionsCount = 2;
@@ -60,7 +60,7 @@ namespace Stalkerraria.Content.NPCs
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return spawnInfo.Player.InModBiome<Wasteland>() ? 0.5f / VersionsCount : 0 ;
+            return spawnInfo.Player.InModBiome<Wasteland>() ? 0.5f / VersionsCount : 0;
         }
 
         /*public override void HitEffect(int hitDirection, double damage)

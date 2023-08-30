@@ -296,6 +296,7 @@ NPCs: {
 	}
 
 	// AlbinoBloodSucker.DisplayName: Albino Blood Sucker
+	// BloodSucker1.DisplayName: Blood Sucker
 }
 
 Buffs: {
