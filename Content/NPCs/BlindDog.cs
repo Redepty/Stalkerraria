@@ -33,7 +33,7 @@ namespace Stalkerraria.Content.NPCs
             NPC.defense = 10;
             NPC.lifeMax = 100;
             NPC.HitSound = SoundID.NPCHit6;
-            NPC.DeathSound = SoundID.NPCDeath8;
+            NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 100;
             NPC.knockBackResist = 0.25f;
             NPC.aiStyle = 26;

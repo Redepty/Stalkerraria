@@ -6,9 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Stalkerraria.Content.Buffs;
 using System.Configuration;
-using Terraria;
 using Terraria.DataStructures;
-using Terraria.ID;
 using Stalkerraria.Content.Projectiles;
 using Stalkerraria.Content.Items.Accessories;
 

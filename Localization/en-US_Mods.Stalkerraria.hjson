@@ -297,6 +297,10 @@ NPCs: {
 
 	AlbinoBloodSucker.DisplayName: Albino Blood Sucker
 	BloodSucker1.DisplayName: Blood Sucker
+	Bandit.DisplayName: Bandit
+	Bandit0.DisplayName: Bandit0
+	Bandit1.DisplayName: Bandit1
+	Bandit2.DisplayName: Bandit2
 }
 
 Buffs: {

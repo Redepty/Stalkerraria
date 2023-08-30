@@ -20,7 +20,7 @@ using Stalkerraria.Content.Items.Weapons;
 
 namespace Stalkerraria.Content.NPCs
 {
-    public class BloodSucker : ModNPC
+    public class BloodSucker0 : ModNPC
     {
 
         public int VersionsCount = 2;
@@ -38,7 +38,7 @@ namespace Stalkerraria.Content.NPCs
             NPC.defense = 10;
             NPC.lifeMax = 200;
             NPC.HitSound = SoundID.NPCHit6;
-            NPC.DeathSound = SoundID.NPCDeath8;
+            NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 100;
             NPC.knockBackResist = 0.25f;
             NPC.aiStyle = 3;
