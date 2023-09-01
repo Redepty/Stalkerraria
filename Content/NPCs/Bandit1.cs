@@ -1,9 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Stalkerraria.Content.Biomes;
+using Stalkerraria.Content.Buffs;
+using Stalkerraria.Content.Items;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using Terraria;
+using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -55,6 +59,16 @@ namespace Stalkerraria.Content.NPCs
             bulletTimer++;
 
             NPC.spriteDirection = NPC.direction;
+        }
+
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        {
+            return spawnInfo.Player.InModBiome<Wasteland>() && spawnInfo.Player.HasBuff(ModContent.BuffType<BlackMark>()) ? 0.2f : 0;
+        }
+
+        public override void ModifyNPCLoot(NPCLoot npcLoot)
+        {
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SwampStone>(), 2));
         }
     }
 }

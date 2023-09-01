@@ -325,6 +325,11 @@ Buffs: {
 		// DisplayName: Jorboa Minion Buff
 		// Description: Mods.Stalkerraria.Buffs.JorboaMinionBuff.Description
 	}
+
+	BlackMark: {
+		// DisplayName: Black Mark
+		// Description: Mods.Stalkerraria.Buffs.BlackMark.Description
+	}
 }
 
 Projectiles: {

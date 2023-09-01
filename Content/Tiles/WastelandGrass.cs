@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -26,6 +27,8 @@ namespace Stalkerraria.Content.Tiles
             Tile tile = Framing.GetTileSafely(i, j);
             Tile tileBelow = Framing.GetTileSafely(i, j + 1);
             Tile tileAbove = Framing.GetTileSafely(i, j - 1);
+            Tile tileAbove2 = Framing.GetTileSafely(i+1, j - 1);
+            Tile tileAbove3 = Framing.GetTileSafely(i-1, j - 1);
 
             //Try place vine
             if (WorldGen.genRand.NextBool(15) && !tileBelow.HasTile && !(tileBelow.LiquidType == LiquidID.Lava))
@@ -42,8 +45,27 @@ namespace Stalkerraria.Content.Tiles
                 }
             }
 
+            // try place bandit's tent
+            if (WorldGen.genRand.NextBool(200) && !tileAbove.HasTile && !tileAbove2.HasTile && !tileAbove3.HasTile)
+            {
+                if (!tile.BottomSlope && !tile.TopSlope && !tile.IsHalfBlock && !tile.TopSlope)
+                {
+                    WorldGen.PlaceObject(i, j - 1, ModContent.TileType<BanditTent>(), true, Main.rand.Next(6));
+                }
+            }
+
+            // try place bandit's boss tent
+            if (WorldGen.genRand.NextBool(200) && !tileAbove.HasTile && !tileAbove2.HasTile && !tileAbove3.HasTile)
+            {
+                if (!tile.BottomSlope && !tile.TopSlope && !tile.IsHalfBlock && !tile.TopSlope)
+                {
+                    WorldGen.PlaceObject(i, j - 1, ModContent.TileType<BanditBossTent>(), true, Main.rand.Next(6));
+                }
+            }
+
+
             //try place foliage
-            if (WorldGen.genRand.NextBool(50) && !tileAbove.HasTile && !(tileBelow.LiquidType == LiquidID.Lava))
+            if (WorldGen.genRand.NextBool(50) && !tileAbove.HasTile && Main.tile[i, j].HasTile && Main.tile[i, j - 1].LiquidAmount == 0)
             {
                 if (!tile.BottomSlope && !tile.TopSlope && !tile.IsHalfBlock && !tile.TopSlope)
                 {

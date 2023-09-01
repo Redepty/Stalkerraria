@@ -24,7 +24,7 @@ namespace Stalkerraria.Content
             tasks.Insert(genIndex - 1, new PassLegacy("Adding zone", delegate
             {
                 int startX = (Main.maxTilesX / 2) + WorldGen.genRand.Next(150, 250);
-                int endX = startX + WorldGen.genRand.Next(200, 250) + Main.maxTilesY / 200;
+                int endX = startX + WorldGen.genRand.Next(300, 350) + Main.maxTilesY / 200;
                 int attempts = 0;
                 bool validLocation = false;
                 for (int i = startX; i < endX; i++)

@@ -76,7 +76,6 @@ namespace Stalkerraria.Content.NPCs
 
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SwampStone>(), 2));
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Mildew>(), 2));
         }
     }
